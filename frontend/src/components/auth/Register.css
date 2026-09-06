@@ -1,0 +1,128 @@
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #eff6ff 0%, #f8fafc 50%, #e2e8f0 100%);
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+
+.register-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: auto 0;
+}
+
+.register-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a202c;
+  text-align: center;
+}
+
+.register-subtitle {
+  text-align: center;
+  color: #718096;
+  margin-top: 0.5rem;
+}
+
+.register-form {
+  margin-top: 2rem;
+}
+
+.register-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.register-input-group {
+  margin-bottom: 1rem;
+}
+
+.register-input-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 0.25rem;
+}
+
+.register-input-group .input-wrapper {
+  position: relative;
+}
+
+.register-input-group .input-wrapper .icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0aec0;
+}
+
+.register-input-group input,
+.register-input-group select {
+  width: 100%;
+  padding: 0.65rem 0.875rem 0.65rem 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  min-height: 2.75rem;
+}
+
+.register-input-group input:focus,
+.register-input-group select:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.register-btn {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+.register-btn:hover {
+  background: #1d4ed8;
+}
+
+.register-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.register-footer {
+  text-align: center;
+  margin-top: 1rem;
+  color: #718096;
+}
+
+.register-footer a {
+  color: #4299e1;
+  text-decoration: none;
+}
+
+.register-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .register-row {
+    grid-template-columns: 1fr;
+  }
+}

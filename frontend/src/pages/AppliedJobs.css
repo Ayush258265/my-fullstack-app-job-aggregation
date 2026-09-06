@@ -1,0 +1,46 @@
+.applied-jobs-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.applied-jobs-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.applied-jobs-empty {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  color: #64748b;
+  border: 1px solid #eef2f7;
+}
+
+.applied-jobs-empty p:first-child {
+  font-weight: 500;
+}
+
+.applied-job-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.applied-job-title {
+  font-weight: 600;
+}
+
+.applied-job-company {
+  color: #4a5568;
+}
+
+.applied-job-date {
+  font-size: 0.875rem;
+  color: #a0aec0;
+}

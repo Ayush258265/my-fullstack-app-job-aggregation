@@ -1,0 +1,154 @@
+.job-card {
+  background: white;
+  border-radius: 0.85rem;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  padding: 1.5rem;
+  border: 1px solid #eef2f7;
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.job-card:hover {
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+  transform: translateY(-1px);
+}
+
+.job-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.job-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.job-card-title:hover {
+  color: #4299e1;
+}
+
+.job-card-company {
+  display: flex;
+  align-items: center;
+  color: #4a5568;
+  margin-top: 0.25rem;
+}
+
+.job-card-company svg {
+  margin-right: 0.5rem;
+  color: #a0aec0;
+}
+
+.job-card-location {
+  display: flex;
+  align-items: center;
+  color: #4a5568;
+  margin-top: 0.25rem;
+}
+
+.job-card-location svg {
+  margin-right: 0.5rem;
+  color: #a0aec0;
+}
+
+.job-card-date {
+  display: flex;
+  align-items: center;
+  color: #a0aec0;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.job-card-date svg {
+  margin-right: 0.5rem;
+  color: #a0aec0;
+}
+
+.job-card-match {
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+.job-card-badge {
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-green {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.badge-yellow {
+  background: #fefcbf;
+  color: #744210;
+}
+
+.badge-red {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.job-card-skills {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.job-card-skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.job-card-skills-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.job-card-skill {
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.skill-match {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.skill-missing {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.job-card-experience {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.job-card-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.job-card-link {
+  color: #4299e1;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.job-card-link:hover {
+  color: #2b6cb0;
+}

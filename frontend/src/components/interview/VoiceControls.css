@@ -1,0 +1,56 @@
+.voice-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.voice-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.8rem;
+  border: none;
+  border-radius: 0.55rem;
+  font-weight: 650;
+  cursor: pointer;
+  background: #dbeafe;
+  color: #1d4ed8;
+  transition: background 0.2s;
+}
+
+.voice-btn:hover:not(:disabled) {
+  background: #bfdbfe;
+}
+
+.voice-btn.listening {
+  background: #ef4444;
+  color: white;
+}
+
+.voice-btn.disabled,
+.voice-btn:disabled {
+  background: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.voice-error {
+  font-size: 0.75rem;
+  color: #dc2626;
+}
+
+.voice-listening {
+  font-size: 0.75rem;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.voice-transcript {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  max-width: 8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
