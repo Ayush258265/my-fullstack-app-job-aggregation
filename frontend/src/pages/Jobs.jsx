@@ -18,8 +18,8 @@ const Jobs = () => {
     experience: searchParams.get('experience') || '',
   });
 
+  // ✅ This function fetches jobs
   const fetchJobs = async (filterParams) => {
-    // ✅ ADD THIS DEBUG LOG
     console.log('🔍 Fetching jobs with params:', filterParams);
     
     setLoading(true);
@@ -37,12 +37,13 @@ const Jobs = () => {
         }
       });
       
-      console.log('📤 Sending request to:', '/jobs', params); // ✅ ADD THIS
+      console.log('📤 Sending request to:', '/jobs', params);
       
       const response = await jobService.searchJobs(params);
       
-      console.log('📥 Response received:', response); // ✅ ADD THIS
+      console.log('📥 Response received:', response);
       
+      // ✅ Safely access data
       const jobsData = response?.data?.data?.content || [];
       setJobs(jobsData);
       
@@ -54,7 +55,7 @@ const Jobs = () => {
       setSearchParams(urlParams);
       
     } catch (error) {
-      console.error('❌ Failed to fetch jobs:', error); // ✅ ADD THIS
+      console.error('❌ Failed to fetch jobs:', error);
       toast.error('Failed to fetch jobs');
       setJobs([]);
     } finally {
@@ -62,10 +63,11 @@ const Jobs = () => {
     }
   };
 
+  // ✅ This runs when the page loads
   useEffect(() => {
-    console.log('🔄 Jobs component mounted, fetching initial jobs'); // ✅ ADD THIS
+    console.log('🔄 Jobs component mounted, fetching initial jobs');
     fetchJobs(filters);
-  }, []);
+  }, []); // Empty dependency array = runs once on mount
 
   const handleFilterChange = (newFilters) => {
     setFilters(newFilters);
