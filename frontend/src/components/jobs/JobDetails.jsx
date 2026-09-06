@@ -70,8 +70,8 @@ const JobDetails = ({ job, loading }) => {
         {match && match.matchPercentage !== null && (
           <div className="mt-3">
             <span className={`px-4 py-2 rounded-full text-sm font-semibold inline-block ${match.matchPercentage >= 70 ? 'bg-green-100 text-green-800' :
-                match.matchPercentage >= 40 ? 'bg-yellow-100 text-yellow-800' :
-                  'bg-red-100 text-red-800'
+              match.matchPercentage >= 40 ? 'bg-yellow-100 text-yellow-800' :
+                'bg-red-100 text-red-800'
               }`}>
               {match.matchPercentage}% Match
             </span>
@@ -128,9 +128,10 @@ const JobDetails = ({ job, loading }) => {
       {/* Description */}
       <div className="mb-6">
         <h4 className="font-semibold mb-2">Job Description</h4>
-        <div className="text-gray-700 whitespace-pre-wrap">
-          {description || 'No description provided.'}
-        </div>
+        <div
+          className="text-gray-700 job-description-content"
+          dangerouslySetInnerHTML={{ __html: description || 'No description provided.' }}
+        />
       </div>
 
       {/* Skills Required */}
