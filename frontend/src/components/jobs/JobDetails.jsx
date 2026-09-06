@@ -376,9 +376,10 @@ const JobDetails = ({ job, loading }) => {
       <div className="flex gap-4">
         <button
           onClick={handleApply}
-          className="flex-1 bg-primary text-white py-3 px-6 rounded-md hover:bg-blue-700 transition flex items-center justify-center gap-2"
+          disabled={!applyUrl}
+          className="flex-1 bg-primary text-white py-3 px-6 rounded-md hover:bg-blue-700 transition flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          <FaExternalLinkAlt /> Apply Now
+          <FaExternalLinkAlt /> {applyUrl ? 'Apply Now' : 'Link Not Available'}
         </button>
       </div>
 
