@@ -3,6 +3,8 @@ import api from './api';
 export const jobService = {
   // Search jobs with filters
   searchJobs: (params) => {
+    console.log('🔍 jobService.searchJobs called with:', params); // ✅ ADD THIS
+
     // Remove empty params
     const cleanParams = {};
     Object.keys(params).forEach(key => {
@@ -12,27 +14,32 @@ export const jobService = {
         cleanParams[key] = params[key];
       }
     });
+
+    console.log('📤 Making API call to /jobs with:', cleanParams); // ✅ ADD THIS
     return api.get('/jobs', { params: cleanParams });
   },
-  
+
   // Get job by ID
   getJobById: (id) => api.get(`/jobs/${id}`),
-  
+
   // Get filter options
-  getFilters: () => api.get('/jobs/filters'),
-  
+  getFilters: () => {
+    console.log('🔍 Fetching filter options'); // ✅ ADD THIS
+    return api.get('/jobs/filters');
+  },
+
   // Track apply click
   trackApply: (data) => api.post('/user/apply', data),
-  
+
   // Get applied jobs
   getAppliedJobs: (params) => api.get('/user/applied', { params }),
-  
+
   // Get not-applied jobs
   getNotAppliedJobs: (params) => api.get('/user/not-applied', { params }),
-  
+
   // Check if job is tracked
   isJobTracked: (jobId) => api.get(`/user/tracked/${jobId}`),
-  
+
   // Get applied count
   getAppliedCount: () => api.get('/user/applied/count'),
 };
