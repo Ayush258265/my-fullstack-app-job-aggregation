@@ -1,13 +1,15 @@
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
+// const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
+
+const API_URL = 'https://jobfinder-backend-fzl8.onrender.com/api';
 
 // ✅ ADD THIS DEBUG LOG
 console.log('📡 API_URL:', API_URL);
 
 const api = axios.create({
-  baseURL: API_URL,
+  baseURL: API_URL,  // ✅ This is the base URL
   headers: {
     'Content-Type': 'application/json',
   },
