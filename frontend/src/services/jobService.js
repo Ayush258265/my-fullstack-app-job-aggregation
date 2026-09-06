@@ -1,11 +1,9 @@
 import api from './api';
+// import { jobService } from '../services/jobService';
 
 export const jobService = {
-  // Search jobs with filters
   searchJobs: (params) => {
-    console.log('🔍 jobService.searchJobs called with:', params); // ✅ ADD THIS
-
-    // Remove empty params
+    console.log('🔍 jobService.searchJobs called with:', params);
     const cleanParams = {};
     Object.keys(params).forEach(key => {
       if (params[key] && params[key].trim && params[key].trim() !== '') {
@@ -14,9 +12,8 @@ export const jobService = {
         cleanParams[key] = params[key];
       }
     });
-
-    console.log('📤 Making API call to /jobs with:', cleanParams); // ✅ ADD THIS
-    return api.get('/jobs', { params: cleanParams });
+    console.log('📤 Making API call to /jobs with:', cleanParams);
+    return api.get('/jobs', { params: cleanParams });  // ✅ Uses api from api.js
   },
 
   // Get job by ID
